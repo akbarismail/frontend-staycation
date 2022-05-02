@@ -43,7 +43,7 @@ export default function Categories(props) {
                       >
                         <h5>{item.name}</h5>
                       </Button>
-                      <span>
+                      <span className="text-gray-300 font-weigth-light">
                         {item.city}, {item.country}
                       </span>
                     </div>
