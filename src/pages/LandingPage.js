@@ -16,17 +16,18 @@ export default class LandingPage extends Component {
   }
 
   render() {
-    console.log(this.refMostPicked);
     return (
       <>
         <Header {...this.props}></Header>
-        <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
-        <MostPicked
-          refMostPicked={this.refMostPicked}
-          data={landingPage.mostPicked}
-        />
-        <Categories data={landingPage.categories} />
-        <Testimony data={landingPage.testimonial} />
+        <main>
+          <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
+          <MostPicked
+            refMostPicked={this.refMostPicked}
+            data={landingPage.mostPicked}
+          />
+          <Categories data={landingPage.categories} />
+          <Testimony data={landingPage.testimonial} />
+        </main>
         <Footer />
       </>
     );
