@@ -17,7 +17,11 @@ export default function Testimony(props) {
               alt={props.data.name}
               style={{ margin: "30px 0 0 30px", zIndex: 1 }}
             />
-            <img src={TestimonialFrame} alt={`${props.data.name}-frame`} />
+            <img
+              className="position-absolute"
+              src={TestimonialFrame}
+              alt={`${props.data.name}-frame`}
+            />
           </div>
         </div>
         <div className="col">
