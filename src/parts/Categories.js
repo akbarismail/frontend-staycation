@@ -42,7 +42,7 @@ export default function Categories(props) {
                         <div className="meta-wrapper">
                           <Button
                             type="link"
-                            href={`/properties/${item._id}`}
+                            href={`/details/${item._id}`}
                             className="stretched-link d-block text-gray-900"
                           >
                             <h5>{item.name}</h5>

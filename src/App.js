@@ -1,19 +1,20 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import LandingPage from "pages/LandingPage";
+import DetailsPage from "pages/DetailsPage";
 
 import "assets/scss/style.scss";
-import Example from "pages/Example";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
-        <Switch>
-          {/* <Route exact path="/" component={LandingPage}></Route> */}
-          <Route exact path="/" component={Example}></Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/details/:id" element={<DetailsPage />} />
+        </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 

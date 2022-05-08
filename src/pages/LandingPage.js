@@ -10,6 +10,11 @@ import Testimony from "parts/Testimony";
 import Footer from "parts/Footer";
 
 export default class LandingPage extends Component {
+  componentDidMount() {
+    window.title = "Staycation | Home Page";
+    window.scrollTo(0, 0);
+  }
+
   constructor(props) {
     super(props);
     this.refMostPicked = React.createRef();
@@ -18,7 +23,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <>
-        <Header {...this.props}></Header>
+        <Header {...this.props} />
         <main>
           <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
           <MostPicked
