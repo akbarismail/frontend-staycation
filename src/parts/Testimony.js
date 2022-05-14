@@ -30,7 +30,7 @@ export default function Testimony(props) {
             <h4 className="text-gray-900" style={{ marginBottom: 40 }}>
               {props.data.name}
             </h4>
-            <Star value={3.5} width={35} height={35} spacing={4} />
+            <Star value={props.data.rate} width={35} height={35} spacing={4} />
             <h5 className="h2 font-weight-light my-2 line-height-2">
               {props.data.content}
             </h5>
