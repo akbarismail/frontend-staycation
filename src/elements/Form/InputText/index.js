@@ -20,8 +20,10 @@ export default function InputText(props) {
   const [HasError, setHasError] = useState(null);
 
   let pattern = "";
-  if (type === "email") pattern = /^(.+)@(.+)$/;
-  if (type === "tel") pattern = /[0-9]*/g;
+  if (type === "email")
+    pattern =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  if (type === "tel") pattern = "[0-9]*";
 
   const onChange = (event) => {
     const target = {
@@ -32,12 +34,12 @@ export default function InputText(props) {
     };
 
     if (type === "email") {
-      if (pattern.test(event.target.value)) setHasError(errorResponse);
+      if (!pattern.test(event.target.value)) setHasError(errorResponse);
       else setHasError(null);
     }
 
     if (type === "tel") {
-      if (pattern.test(event.target.validity.valid)) props.onChange(target);
+      if (event.target.validity.valid) props.onChange(target);
     } else {
       props.onChange(target);
     }

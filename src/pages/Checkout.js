@@ -111,11 +111,11 @@ export default class Checkout extends Component {
                       </Fade>
                     )}
                   <Button
-                    className="btn"
+                    className="btn d-flex justify-content-center"
                     type="link"
                     isBlock
                     isLight
-                    href={`/properties/${ItemDetails._id}`}
+                    href={`/details/${ItemDetails._id}`}
                   >
                     Cancel
                   </Button>
@@ -153,7 +153,7 @@ export default class Checkout extends Component {
               {currentStep === "completed" && (
                 <Controller>
                   <Button
-                    className="btn"
+                    className="btn d-flex justify-content-center"
                     type="link"
                     isBlock
                     isPrimary
